@@ -1,0 +1,12 @@
+ # best
+ (   ECSSD    ):0.0230 mae  ||0.9534 max-fm max-fm|| 0.9690 max-Emeasure max_e || 0.9359  S-m   || 0.9661 mean-Emeasure || 0.9459 mean-fm || 0.9390 AP || 0.9677 AUC.
+ ( DUT-OMRON  ):0.0506 mae  ||0.8096 max-fm max-fm|| 0.8905 max-Emeasure max_e || 0.8520  S-m   || 0.8878 mean-Emeasure || 0.8030 mean-fm || 0.7543 AP || 0.9081 AUC.
+ (   HKU-IS   ):0.0207 mae  ||0.9424 max-fm max-fm|| 0.9708 max-Emeasure max_e || 0.9290  S-m   || 0.9679 mean-Emeasure || 0.9339 mean-fm || 0.9222 AP || 0.9647 AUC.
+ (  PASCAL-S  ):0.0493 mae  ||0.8804 max-fm max-fm|| 0.9216 max-Emeasure max_e || 0.8750  S-m   || 0.9187 mean-Emeasure || 0.8679 mean-fm || 0.8362 AP || 0.9214 AUC.
+ (DUTS/DUTS-TE):0.0288 mae  ||0.8951 max-fm max-fm|| 0.9471 max-Emeasure max_e || 0.9032  S-m   || 0.9442 mean-Emeasure || 0.8879 mean-fm || 0.8661 AP || 0.9475 AUC.
+
+ (   ECSSD    ):0.0230 mae  ||0.9534 max-fm max-fm|| 0.9690 max-Emeasure max_e || 0.9359  S-m   || 0.9661 mean-Emeasure || 0.9459 mean-fm || 0.9390 AP || 0.9677 AUC.
+ ( DUT-OMRON  ):0.0506 mae  ||0.8096 max-fm max-fm|| 0.8905 max-Emeasure max_e || 0.8520  S-m   || 0.8878 mean-Emeasure || 0.8030 mean-fm || 0.7543 AP || 0.9081 AUC.
+ (   HKU-IS   ):0.0207 mae  ||0.9424 max-fm max-fm|| 0.9708 max-Emeasure max_e || 0.9290  S-m   || 0.9679 mean-Emeasure || 0.9339 mean-fm || 0.9222 AP || 0.9647 AUC.
+ (  PASCAL-S  ):0.0493 mae  ||0.8804 max-fm max-fm|| 0.9216 max-Emeasure max_e || 0.8750  S-m   || 0.9187 mean-Emeasure || 0.8679 mean-fm || 0.8362 AP || 0.9214 AUC.
+ (DUTS/DUTS-TE):0.0288 mae  ||0.8951 max-fm max-fm|| 0.9471 max-Emeasure max_e || 0.9032  S-m   || 0.9442 mean-Emeasure || 0.8879 mean-fm || 0.8661 AP || 0.9475 AUC.
