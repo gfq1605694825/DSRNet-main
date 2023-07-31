@@ -49,9 +49,9 @@ If you want to train/test with different settings, please refer to **option.py**
 Currently only support training on single GPU.
 
 ### Pretrain Model & Pre-calculated Saliency Map
-Pre-calculated saliency map: [[Baidu]](https)
+Pre-calculated saliency map: [[Baidu 8a3a]](https://pan.baidu.com/s/11qHLBFnn-bhGH0gj3soQtQ)
 
-Pre-trained model on DUTS-TE: [[Baidu]](https)
+Pre-trained model on ECSSD: [[Baidu]](https)
 
 ### Evaluation
 Firstly, obtain predictions via
@@ -65,9 +65,9 @@ For *MAE*, *F measure* and *S score*, we use the code provided by this repo: [[V
 
 ### Evaluation Results
 #### Quantitative Evaluation
-<img src="https://github.com/BarCodeReader/SelfReformer/blob/main/asset/table1.PNG" alt="drawing" width="1200"/>
-<img src="https://github.com/BarCodeReader/SelfReformer/blob/main/asset/pr_curve.png" alt="drawing" width="1200"/>
+<img src="" alt="drawing" width="1200"/>
+<img src="" alt="drawing" width="1200"/>
 
 #### Qualitative Evaluation
-<img src="https://github.com/BarCodeReader/SelfReformer/blob/main/asset/figure1.png" alt="drawing" width="1200"/>
+<img src="" alt="drawing" width="1200"/>
 
