@@ -1,0 +1,102 @@
+
+ ========>> Date: 2023-05-15 18:14:34.793146 <<========
+ ========>> Dataset: ECSSD <<========
+[Ours  ] sm: 0.936  wfm: 0.941  mae: 0.023  maxfmeasure: 0.953  avgfmeasure: 0.946  adpfmeasure: 0.948  maxprecision: 0.974  avgprecision: 0.954  maxrecall: 1.0    avgrecall: 0.948  maxem: 0.969  avgem: 0.966  adpem: 0.969
+ ========>> Dataset: ECSSD <<========
+[RCSB  ] sm: 0.922  wfm: 0.916  mae: 0.034  maxfmeasure: 0.935  avgfmeasure: 0.929  adpfmeasure: 0.927  maxprecision: 0.981  avgprecision: 0.943  maxrecall: 1.0    avgrecall: 0.923  maxem: 0.954  avgem: 0.95   adpem: 0.948
+ ========>> Dataset: ECSSD <<========
+[BINet ] sm: 0.926  wfm: 0.916  mae: 0.033  maxfmeasure: 0.939  avgfmeasure: 0.926  adpfmeasure: 0.928  maxprecision: 0.986  avgprecision: 0.94   maxrecall: 1.0    avgrecall: 0.925  maxem: 0.957  avgem: 0.951  adpem: 0.952
+ ========>> Dataset: ECSSD <<========
+[DHQNet] sm: 0.927  wfm: 0.928  mae: 0.029  maxfmeasure: 0.945  avgfmeasure: 0.94   adpfmeasure: 0.943  maxprecision: 0.968  avgprecision: 0.954  maxrecall: 1.0    avgrecall: 0.926  maxem: 0.96   avgem: 0.957  adpem: 0.96
+ ========>> Dataset: ECSSD <<========
+[DCNet ] sm: 0.928  wfm: 0.92   mae: 0.031  maxfmeasure: 0.943  avgfmeasure: 0.931  adpfmeasure: 0.934  maxprecision: 0.985  avgprecision: 0.943  maxrecall: 1.0    avgrecall: 0.93   maxem: 0.959  avgem: 0.953  adpem: 0.957
+ ========>> Dataset: ECSSD <<========
+[VST   ] sm: 0.932  wfm: 0.91   mae: 0.033  maxfmeasure: 0.944  avgfmeasure: 0.92   adpfmeasure: 0.92   maxprecision: 0.983  avgprecision: 0.925  maxrecall: 1.0    avgrecall: 0.935  maxem: 0.964  avgem: 0.951  adpem: 0.957
+ ========>> Dataset: ECSSD <<========
+[LDF   ] sm: 0.924  wfm: 0.915  mae: 0.034  maxfmeasure: 0.938  avgfmeasure: 0.927  adpfmeasure: 0.93   maxprecision: 0.985  avgprecision: 0.943  maxrecall: 1.0    avgrecall: 0.923  maxem: 0.954  avgem: 0.948  adpem: 0.951
+ ========>> Dataset: ECSSD <<========
+[EDN   ] sm: 0.927  wfm: 0.918  mae: 0.032  maxfmeasure: 0.941  avgfmeasure: 0.93   adpfmeasure: 0.932  maxprecision: 0.984  avgprecision: 0.947  maxrecall: 1.0    avgrecall: 0.92   maxem: 0.958  avgem: 0.951  adpem: 0.955
+ ========>> Dataset: ECSSD <<========
+[ICON  ] sm: 0.929  wfm: 0.918  mae: 0.032  maxfmeasure: 0.943  avgfmeasure: 0.928  adpfmeasure: 0.928  maxprecision: 0.985  avgprecision: 0.933  maxrecall: 1.0    avgrecall: 0.937  maxem: 0.96   avgem: 0.954  adpem: 0.954
+ ========>> Dataset: ECSSD <<========
+[PurNet] sm: 0.93   wfm: 0.92   mae: 0.031  maxfmeasure: 0.942  avgfmeasure: 0.93   adpfmeasure: 0.932  maxprecision: 0.986  avgprecision: 0.941  maxrecall: 1.0    avgrecall: 0.935  maxem: 0.958  avgem: 0.953  adpem: 0.953
+ ========>> Dataset: DUTS-TE <<========
+[Ours  ] sm: 0.903  wfm: 0.882  mae: 0.029  maxfmeasure: 0.896  avgfmeasure: 0.889  adpfmeasure: 0.89   maxprecision: 0.923  avgprecision: 0.894  maxrecall: 1.0    avgrecall: 0.919  maxem: 0.948  avgem: 0.945  adpem: 0.948
+ ========>> Dataset: DUTS-TE <<========
+[RCSB  ] sm: 0.881  wfm: 0.84   mae: 0.035  maxfmeasure: 0.868  avgfmeasure: 0.86   adpfmeasure: 0.856  maxprecision: 0.951  avgprecision: 0.887  maxrecall: 1.0    avgrecall: 0.854  maxem: 0.925  avgem: 0.919  adpem: 0.92
+ ========>> Dataset: DUTS-TE <<========
+[BINet ] sm: 0.889  wfm: 0.841  mae: 0.035  maxfmeasure: 0.874  avgfmeasure: 0.858  adpfmeasure: 0.849  maxprecision: 0.944  avgprecision: 0.873  maxrecall: 1.0    avgrecall: 0.883  maxem: 0.93   avgem: 0.924  adpem: 0.927
+ ========>> Dataset: DUTS-TE <<========
+[DHQNet] sm: 0.892  wfm: 0.86   mae: 0.032  maxfmeasure: 0.882  avgfmeasure: 0.876  adpfmeasure: 0.875  maxprecision: 0.91   avgprecision: 0.89   maxrecall: 1.0    avgrecall: 0.888  maxem: 0.936  avgem: 0.933  adpem: 0.936
+ ========>> Dataset: DUTS-TE <<========
+[DCNet ] sm: 0.892  wfm: 0.84   mae: 0.035  maxfmeasure: 0.876  avgfmeasure: 0.86   adpfmeasure: 0.844  maxprecision: 0.943  avgprecision: 0.872  maxrecall: 1.0    avgrecall: 0.889  maxem: 0.933  avgem: 0.925  adpem: 0.923
+ ========>> Dataset: DUTS-TE <<========
+[VST   ] sm: 0.896  wfm: 0.828  mae: 0.037  maxfmeasure: 0.878  avgfmeasure: 0.845  adpfmeasure: 0.818  maxprecision: 0.941  avgprecision: 0.856  maxrecall: 1.0    avgrecall: 0.884  maxem: 0.939  avgem: 0.919  adpem: 0.916
+ ========>> Dataset: DUTS-TE <<========
+[LDF   ] sm: 0.892  wfm: 0.845  mae: 0.034  maxfmeasure: 0.877  avgfmeasure: 0.861  adpfmeasure: 0.855  maxprecision: 0.944  avgprecision: 0.877  maxrecall: 1.0    avgrecall: 0.89   maxem: 0.93   avgem: 0.925  adpem: 0.929
+ ========>> Dataset: DUTS-TE <<========
+[EDN   ] sm: 0.892  wfm: 0.845  mae: 0.035  maxfmeasure: 0.878  avgfmeasure: 0.863  adpfmeasure: 0.851  maxprecision: 0.945  avgprecision: 0.881  maxrecall: 1.0    avgrecall: 0.877  maxem: 0.934  avgem: 0.925  adpem: 0.928
+ ========>> Dataset: DUTS-TE <<========
+[ICON  ] sm: 0.889  wfm: 0.837  mae: 0.037  maxfmeasure: 0.877  avgfmeasure: 0.853  adpfmeasure: 0.838  maxprecision: 0.948  avgprecision: 0.86   maxrecall: 1.0    avgrecall: 0.898  maxem: 0.932  avgem: 0.924  adpem: 0.919
+ ========>> Dataset: DUTS-TE <<========
+[PurNet] sm: 0.892  wfm: 0.842  mae: 0.036  maxfmeasure: 0.88   avgfmeasure: 0.858  adpfmeasure: 0.846  maxprecision: 0.944  avgprecision: 0.864  maxrecall: 1.0    avgrecall: 0.906  maxem: 0.931  avgem: 0.924  adpem: 0.922
+ ========>> Dataset: DUT-OMRON <<========
+[Ours  ] sm: 0.852  wfm: 0.794  mae: 0.051  maxfmeasure: 0.81   avgfmeasure: 0.803  adpfmeasure: 0.807  maxprecision: 0.836  avgprecision: 0.809  maxrecall: 1.0    avgrecall: 0.873  maxem: 0.891  avgem: 0.888  adpem: 0.891
+ ========>> Dataset: DUT-OMRON <<========
+[RCSB  ] sm: 0.835  wfm: 0.752  mae: 0.049  maxfmeasure: 0.773  avgfmeasure: 0.768  adpfmeasure: 0.778  maxprecision: 0.866  avgprecision: 0.804  maxrecall: 1.0    avgrecall: 0.789  maxem: 0.866  avgem: 0.858  adpem: 0.87
+ ========>> Dataset: DUT-OMRON <<========
+[BINet ] sm: 0.837  wfm: 0.749  mae: 0.052  maxfmeasure: 0.778  avgfmeasure: 0.766  adpfmeasure: 0.768  maxprecision: 0.857  avgprecision: 0.79   maxrecall: 1.0    avgrecall: 0.821  maxem: 0.871  avgem: 0.866  adpem: 0.882
+ ========>> Dataset: DUT-OMRON <<========
+[DHQNet] sm: 0.84   wfm: 0.77   mae: 0.05   maxfmeasure: 0.792  avgfmeasure: 0.787  adpfmeasure: 0.788  maxprecision: 0.824  avgprecision: 0.805  maxrecall: 1.0    avgrecall: 0.831  maxem: 0.88   avgem: 0.877  adpem: 0.881
+ ========>> Dataset: DUT-OMRON <<========
+[DCNet ] sm: 0.845  wfm: 0.76   mae: 0.051  maxfmeasure: 0.789  avgfmeasure: 0.779  adpfmeasure: 0.774  maxprecision: 0.866  avgprecision: 0.798  maxrecall: 1.0    avgrecall: 0.838  maxem: 0.884  avgem: 0.875  adpem: 0.885
+ ========>> Dataset: DUT-OMRON <<========
+[VST   ] sm: 0.85   wfm: 0.755  mae: 0.058  maxfmeasure: 0.8    avgfmeasure: 0.774  adpfmeasure: 0.756  maxprecision: 0.868  avgprecision: 0.785  maxrecall: 1.0    avgrecall: 0.853  maxem: 0.888  avgem: 0.871  adpem: 0.872
+ ========>> Dataset: DUT-OMRON <<========
+[LDF   ] sm: 0.839  wfm: 0.752  mae: 0.052  maxfmeasure: 0.782  avgfmeasure: 0.77   adpfmeasure: 0.773  maxprecision: 0.862  avgprecision: 0.795  maxrecall: 1.0    avgrecall: 0.828  maxem: 0.869  avgem: 0.865  adpem: 0.881
+ ========>> Dataset: DUT-OMRON <<========
+[EDN   ] sm: 0.849  wfm: 0.77   mae: 0.049  maxfmeasure: 0.799  avgfmeasure: 0.788  adpfmeasure: 0.785  maxprecision: 0.872  avgprecision: 0.811  maxrecall: 1.0    avgrecall: 0.83   maxem: 0.885  avgem: 0.877  adpem: 0.885
+ ========>> Dataset: DUT-OMRON <<========
+[ICON  ] sm: 0.844  wfm: 0.761  mae: 0.057  maxfmeasure: 0.799  avgfmeasure: 0.779  adpfmeasure: 0.772  maxprecision: 0.874  avgprecision: 0.786  maxrecall: 1.0    avgrecall: 0.862  maxem: 0.884  avgem: 0.876  adpem: 0.879
+ ========>> Dataset: DUT-OMRON <<========
+[PurNet] sm: 0.842  wfm: 0.756  mae: 0.055  maxfmeasure: 0.79   avgfmeasure: 0.774  adpfmeasure: 0.774  maxprecision: 0.871  avgprecision: 0.788  maxrecall: 1.0    avgrecall: 0.852  maxem: 0.878  avgem: 0.871  adpem: 0.883
+ ========>> Dataset: HKU-IS <<========
+[Ours  ] sm: 0.929  wfm: 0.93   mae: 0.021  maxfmeasure: 0.942  avgfmeasure: 0.934  adpfmeasure: 0.936  maxprecision: 0.966  avgprecision: 0.94   maxrecall: 1.0    avgrecall: 0.938  maxem: 0.971  avgem: 0.968  adpem: 0.971
+ ========>> Dataset: HKU-IS <<========
+[RCSB  ] sm: 0.919  wfm: 0.909  mae: 0.027  maxfmeasure: 0.929  avgfmeasure: 0.921  adpfmeasure: 0.923  maxprecision: 0.983  avgprecision: 0.936  maxrecall: 1.0    avgrecall: 0.911  maxem: 0.959  avgem: 0.954  adpem: 0.959
+ ========>> Dataset: HKU-IS <<========
+[BINet ] sm: 0.919  wfm: 0.902  mae: 0.028  maxfmeasure: 0.929  avgfmeasure: 0.914  adpfmeasure: 0.913  maxprecision: 0.98   avgprecision: 0.925  maxrecall: 1.0    avgrecall: 0.917  maxem: 0.959  avgem: 0.953  adpem: 0.959
+ ========>> Dataset: HKU-IS <<========
+[DHQNet] sm: 0.923  wfm: 0.919  mae: 0.025  maxfmeasure: 0.937  avgfmeasure: 0.931  adpfmeasure: 0.932  maxprecision: 0.963  avgprecision: 0.944  maxrecall: 1.0    avgrecall: 0.918  maxem: 0.964  avgem: 0.96   adpem: 0.964
+ ========>> Dataset: HKU-IS <<========
+[DCNet ] sm: 0.922  wfm: 0.905  mae: 0.027  maxfmeasure: 0.93   avgfmeasure: 0.915  adpfmeasure: 0.914  maxprecision: 0.981  avgprecision: 0.924  maxrecall: 1.0    avgrecall: 0.92   maxem: 0.963  avgem: 0.956  adpem: 0.962
+ ========>> Dataset: HKU-IS <<========
+[VST   ] sm: 0.928  wfm: 0.897  mae: 0.029  maxfmeasure: 0.937  avgfmeasure: 0.907  adpfmeasure: 0.9    maxprecision: 0.985  avgprecision: 0.914  maxrecall: 1.0    avgrecall: 0.921  maxem: 0.968  avgem: 0.952  adpem: 0.96
+ ========>> Dataset: HKU-IS <<========
+[LDF   ] sm: 0.919  wfm: 0.904  mae: 0.028  maxfmeasure: 0.929  avgfmeasure: 0.913  adpfmeasure: 0.914  maxprecision: 0.978  avgprecision: 0.925  maxrecall: 1.0    avgrecall: 0.918  maxem: 0.958  avgem: 0.953  adpem: 0.96
+ ========>> Dataset: HKU-IS <<========
+[EDN   ] sm: 0.924  wfm: 0.908  mae: 0.026  maxfmeasure: 0.932  avgfmeasure: 0.92   adpfmeasure: 0.919  maxprecision: 0.981  avgprecision: 0.934  maxrecall: 1.0    avgrecall: 0.911  maxem: 0.962  avgem: 0.955  adpem: 0.962
+ ========>> Dataset: HKU-IS <<========
+[ICON  ] sm: 0.92   wfm: 0.902  mae: 0.029  maxfmeasure: 0.93   avgfmeasure: 0.912  adpfmeasure: 0.91   maxprecision: 0.982  avgprecision: 0.919  maxrecall: 1.0    avgrecall: 0.925  maxem: 0.96   avgem: 0.953  adpem: 0.958
+ ========>> Dataset: HKU-IS <<========
+[PurNet] sm: 0.924  wfm: 0.91   mae: 0.026  maxfmeasure: 0.934  avgfmeasure: 0.918  adpfmeasure: 0.919  maxprecision: 0.982  avgprecision: 0.927  maxrecall: 1.0    avgrecall: 0.927  maxem: 0.962  avgem: 0.957  adpem: 0.962
+ ========>> Dataset: PASCAL-S <<========
+[Ours  ] sm: 0.875  wfm: 0.856  mae: 0.049  maxfmeasure: 0.88   avgfmeasure: 0.868  adpfmeasure: 0.87   maxprecision: 0.898  avgprecision: 0.872  maxrecall: 0.993  avgrecall: 0.904  maxem: 0.926  avgem: 0.923  adpem: 0.925
+ ========>> Dataset: PASCAL-S <<========
+[RCSB  ] sm: 0.86   wfm: 0.826  mae: 0.059  maxfmeasure: 0.852  avgfmeasure: 0.844  adpfmeasure: 0.848  maxprecision: 0.929  avgprecision: 0.855  maxrecall: 0.993  avgrecall: 0.884  maxem: 0.906  avgem: 0.902  adpem: 0.907
+ ========>> Dataset: PASCAL-S <<========
+[BINet ] sm: 0.859  wfm: 0.817  mae: 0.063  maxfmeasure: 0.855  avgfmeasure: 0.838  adpfmeasure: 0.835  maxprecision: 0.921  avgprecision: 0.848  maxrecall: 0.993  avgrecall: 0.874  maxem: 0.906  avgem: 0.899  adpem: 0.898
+ ========>> Dataset: PASCAL-S <<========
+[DHQNet] sm: 0.859  wfm: 0.833  mae: 0.06   maxfmeasure: 0.861  avgfmeasure: 0.853  adpfmeasure: 0.853  maxprecision: 0.893  avgprecision: 0.871  maxrecall: 0.993  avgrecall: 0.871  maxem: 0.907  avgem: 0.905  adpem: 0.907
+ ========>> Dataset: PASCAL-S <<========
+[DCNet ] sm: 0.861  wfm: 0.82   mae: 0.062  maxfmeasure: 0.853  avgfmeasure: 0.839  adpfmeasure: 0.837  maxprecision: 0.91   avgprecision: 0.847  maxrecall: 0.993  avgrecall: 0.882  maxem: 0.905  avgem: 0.9    adpem: 0.902
+ ========>> Dataset: PASCAL-S <<========
+[VST   ] sm: 0.872  wfm: 0.816  mae: 0.061  maxfmeasure: 0.864  avgfmeasure: 0.835  adpfmeasure: 0.829  maxprecision: 0.912  avgprecision: 0.831  maxrecall: 0.993  avgrecall: 0.907  maxem: 0.918  avgem: 0.902  adpem: 0.902
+ ========>> Dataset: PASCAL-S <<========
+[LDF   ] sm: 0.863  wfm: 0.822  mae: 0.06   maxfmeasure: 0.855  avgfmeasure: 0.842  adpfmeasure: 0.843  maxprecision: 0.914  avgprecision: 0.853  maxrecall: 0.993  avgrecall: 0.875  maxem: 0.908  avgem: 0.903  adpem: 0.905
+ ========>> Dataset: PASCAL-S <<========
+[EDN   ] sm: 0.865  wfm: 0.827  mae: 0.062  maxfmeasure: 0.86   avgfmeasure: 0.849  adpfmeasure: 0.847  maxprecision: 0.923  avgprecision: 0.866  maxrecall: 0.993  avgrecall: 0.867  maxem: 0.908  avgem: 0.902  adpem: 0.904
+ ========>> Dataset: PASCAL-S <<========
+[ICON  ] sm: 0.861  wfm: 0.818  mae: 0.064  maxfmeasure: 0.86   avgfmeasure: 0.838  adpfmeasure: 0.833  maxprecision: 0.922  avgprecision: 0.84   maxrecall: 0.993  avgrecall: 0.895  maxem: 0.908  avgem: 0.899  adpem: 0.893
+ ========>> Dataset: PASCAL-S <<========
+[PurNet] sm: 0.86   wfm: 0.819  mae: 0.063  maxfmeasure: 0.853  avgfmeasure: 0.839  adpfmeasure: 0.837  maxprecision: 0.922  avgprecision: 0.846  maxrecall: 0.993  avgrecall: 0.887  maxem: 0.906  avgem: 0.901  adpem: 0.895

@@ -61,7 +61,7 @@ python main.py --test_only --pretrain "xxx/best.pt" --GPU_ID 0 --save_result --s
 Output will be saved in `./output/abc` if you specified the **save_msg** flag.
 
 For *PR curve* and *F curve*, we use the code provided by this repo: [[PySODEvalToolkit]](https://github.com/lartpang/PySODEvalToolkit)\
-For *MAE*, *F measure* and *S score*, we use the code provided by this repo: [[VST, ICCV-2021]](https://github.com/nnizhang/VST)
+For *MAE*, *F measure* and *S score*, we use the code provided by this repo: [[PySODEvalToolkit]](https://github.com/lartpang/PySODEvalToolkit)
 
 ### Evaluation Results
 #### Quantitative Evaluation
