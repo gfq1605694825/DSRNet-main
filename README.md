@@ -51,7 +51,7 @@ Currently only support training on single GPU.
 ### Pretrain Model & Pre-calculated Saliency Map
 Pre-calculated saliency map: [[Baidu 8a3a]](https://pan.baidu.com/s/11qHLBFnn-bhGH0gj3soQtQ)
 
-Pre-trained model on ECSSD: [[Baidu]](https)
+Pre-trained model on ECSSD: [[Baidu xhcp]](https://pan.baidu.com/s/1vQVvnVztUbmCRXAi0Q2eHw)
 
 ### Evaluation
 Firstly, obtain predictions via
