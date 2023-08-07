@@ -65,9 +65,10 @@ For *MAE*, *F measure* and *S score*, we use the code provided by this repo: [[P
 
 ### Evaluation Results
 #### Quantitative Evaluation
-<img src="" alt="drawing" width="1200"/>
-<img src="" alt="drawing" width="1200"/>
+<img src="./asset/compare_data.png" alt="drawing" width="1200"/>
+<img src="./asset/fm.png" alt="drawing" width="1200"/>
+<img src="./asset/pr.png" alt="drawing" width="1200"/>
 
 #### Qualitative Evaluation
-<img src="" alt="drawing" width="1200"/>
+<img src="./asset/compare_fig.png" alt="drawing" width="1200"/>
 
