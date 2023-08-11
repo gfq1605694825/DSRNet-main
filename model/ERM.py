@@ -66,13 +66,10 @@ class ERM(nn.Module):
         B, _, C = x.shape
         x = x.transpose(1, 2).reshape(B, C, self.hw, self.hw)
 
-        # input_map = d - e
-        # x = torch.cat([glbmap, x], dim=1)
         x = self.conv_fuse(x)
         # pred
         p1 = self.conv_p1(x)
-        # matt = self.sigmoid(p1)
-        # matt = matt * (1 - matt)  # 显著图乘背景图  剩下边缘
+
         d = self.tensor_dilate(p1)
         e = self.tensor_erode(p1)
         matt = d - e
