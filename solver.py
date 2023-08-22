@@ -119,8 +119,6 @@ class Solver():
                 io.imsave(save_path_sal, pred_sal)
 
         self.net.train()
-        print(mae)
-        print(len(self.eval_loader))
         return mae / len(self.eval_loader)
 
     def load(self, path):

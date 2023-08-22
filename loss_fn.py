@@ -39,14 +39,14 @@ class ConfidentLoss:
             if scale > 1:
                 sal_pred = F.pixel_shuffle(sal_pred, scale)
 
-            if count == 0:  # global context
+            if count == 0:  # Second stage forecast
 
                 stage_sal_loss = self.weighted_bce(sal_pred, target)
             else:
 
                 stage_sal_loss = self.confident_loss(sal_pred, target, beta=2)
 
-                if count % 2 == 0:# 第二阶段预测
+                if count % 2 == 0:# Second stage forecast
                     stage_sal_loss = self.weighted_bce(sal_pred, target)
 
             sal_loss += wght * stage_sal_loss

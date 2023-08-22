@@ -10,17 +10,17 @@ def parse_args():
     parser.add_argument("--pretrain", type=str, default="")
     parser.add_argument("--model", type=str, default="network")
     parser.add_argument("--GPU_ID", type=int, default=0)
-    parser.add_argument("--p2t_path", type=str, default='/home/root803/gfq/pretrain/p2t_base.pth')
+    parser.add_argument("--p2t_path", type=str, default='/home/root803/gfq/pretrain/p2t_base.pth')# Pre-trained model address
     parser.add_argument("--res2net_path", type=str, default='/home/root803/gfq/pretrain/res2net50.pth')
 
     # dataset
-    parser.add_argument("--dataset_root", type=str, default="/home/root803/gfq/数据集/")
+    parser.add_argument("--dataset_root", type=str, default="/home/root803/gfq/数据集/")# Data set root directory
     parser.add_argument("--dataset", type=str, default="DUTSTR")
-    parser.add_argument("--test_dataset", type=str, default="benchmark_ECSSD")
+    parser.add_argument("--test_dataset", type=str, default="benchmark_ECSSD")# Verify the data set name
     parser.add_argument('--test_paths', type=str, default=r'ECSSD+DUT-OMRON+HKU-IS+PASCAL-S+DUTS/DUTS-TE',
-                        help='root')
+                        help='root') # Test data set name
     parser.add_argument('--test_save_path', type=str, default=r'/home/root803/gfq/test_img/DSRNet_test/',
-                        help='root')
+                        help='root')# Test output address
     parser.add_argument('--save_path', type=str, default=r'/home/root803/gfq/DSRNet/output/',
                         help='the path to save models and logs')  # test log save path
     # training setups

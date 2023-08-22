@@ -54,7 +54,7 @@ class Tester():
 
                 pred = self.net(IMG)
 
-                # 保存最后一阶段的输出 上采样缩小通道
+                # Save the last stage of the output upsampling reduction channel
                 pred = F.pixel_shuffle(pred[7], 4)
 
                 pred = F.interpolate(pred, (h, w), mode='bilinear', align_corners=False)

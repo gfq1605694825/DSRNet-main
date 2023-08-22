@@ -18,14 +18,14 @@ class FEM(nn.Module):
 
     def forward(self, a, b, c):
         B, _, _ = b.shape
-        # 转换形状然后上采样
+        # Transform shape and upsample
         b = self.shuffle(b.transpose(1, 2).reshape(B, -1, self.hw, self.hw))
 
-        # 上采样后 再换回去
+        # Blend and then switch back
         b = self.fuse_enhance(b, c)
         b = self.unfold(b).transpose(1, 2)
 
-        # 进行cat然后一个全连接层调整到transformer想要的通道数
+        # cat then adjusts a full connection layer to the number of channels that transformer needs to input
         out = self.concatFuse(torch.cat([a, b], dim=2))
         out = self.att(out)
 
@@ -36,20 +36,20 @@ class ChannelAttention(nn.Module):
     def __init__(self, in_planes, ratio=4):
         super(ChannelAttention, self).__init__()
 
-        self.avg_pool = nn.AdaptiveAvgPool2d(1)  # 定义全局平均池化
-        self.max_pool = nn.AdaptiveMaxPool2d(1)  # 定义全局最大池化
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)  # Global average pooling
+        self.max_pool = nn.AdaptiveMaxPool2d(1)  # Global maximum pooling
 
-        # 定义CBAM中的通道依赖关系学习层
+        # Channel compression and recovery
         self.fc = nn.Sequential(nn.Conv2d(in_planes, in_planes // ratio, 1, bias=False),
                                 nn.ReLU(),
                                 nn.Conv2d(in_planes // ratio, in_planes, 1, bias=False))
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
-        avg_out = self.fc(self.avg_pool(x))  # 实现全局平均池化
-        max_out = self.fc(self.max_pool(x))  # 实现全局最大池化
-        out = avg_out + max_out  # 两种信息融合
-        # 最后利用sigmoid进行赋权
+        avg_out = self.fc(self.avg_pool(x))  # Global average pooling
+        max_out = self.fc(self.max_pool(x))  # Global maximum pooling
+        out = avg_out + max_out  # Two kinds of information merge
+        # sigmoid is used for empowerment
         return self.sigmoid(out)
 
 
@@ -90,9 +90,9 @@ class fuse_enhance(nn.Module):
     def __init__(self, infeature):
         super(fuse_enhance, self).__init__()
         self.infeature = infeature
-        # 通道注意力
+        # Channel attention
         self.ca = ChannelAttention(self.infeature)
-        # 空间注意力
+        # Spatial attention
         self.sa = SpatialAttention()
 
         self.cbr1 = conv3x3_bn_relu(2 * self.infeature, self.infeature)
@@ -105,24 +105,23 @@ class fuse_enhance(nn.Module):
     def forward(self, t, c):
         assert t.shape == c.shape, "cnn and transfrmer should have same size"
         # B, C, H, W = r.shape
-        t_s = self.sa(t)  # Transformer空间注意力权重
-        c_c = self.ca(c)  # CNN 通道注意力 权重
-        # 这里应该是concat
-        # transformer特征乘CNN通道注意力权重
+        t_s = self.sa(t)  # Transformer space attention weight
+        c_c = self.ca(c)  # CNN channel attention weight
+
         t_x = t * c_c
-        # CNN特征乘Transformer空间注意力权重
         c_x = c * t_s
 
+        # Stepwise integration
+        # 1
         x = torch.cat([t_x, c_x], dim=1)
-
         x = self.cbr1(x)
-
+        # 2
         tx = torch.cat([t, x], dim=1)
         cx = torch.cat([c, x], dim=1)
 
         tx = self.cbr2(tx)
         cx = self.cbr3(cx)
-
+        # 3
         x = torch.cat([tx, cx], dim=1)
         x = self.cbr4(x)
 
