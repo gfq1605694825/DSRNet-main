@@ -19,7 +19,7 @@ def parse_args():
     parser.add_argument("--test_dataset", type=str, default="benchmark_ECSSD")# Verify the data set name
     parser.add_argument('--test_paths', type=str, default=r'ECSSD+DUT-OMRON+HKU-IS+PASCAL-S+DUTS/DUTS-TE',
                         help='root') # Test data set name
-    parser.add_argument('--test_save_path', type=str, default=r'/home/root803/gfq/test_img/DSRNet_test/',
+    parser.add_argument('--test_save_path', type=str, default=r'/home/root803/gfq/test_img/DSRNet_test_1231231233/',
                         help='root')# Test output address
     parser.add_argument('--save_path', type=str, default=r'/home/root803/gfq/DSRNet/output/',
                         help='the path to save models and logs')  # test log save path
@@ -37,10 +37,10 @@ def parse_args():
                         help="lambda in loss function, it is divided by 10 to make it float, so here use integer")
 
     # misc
-    parser.add_argument("--test_only", default=False, action="store_true")
+    parser.add_argument("--test_only", default=True, action="store_true")
     parser.add_argument("--random_seed", action="store_true")
     parser.add_argument("--save_every_ckpt", action="store_true")  # save ckpt
-    parser.add_argument("--save_result", default=False, action="store_true")  # save pred
+    parser.add_argument("--save_result", default=True, action="store_true")  # save pred
     parser.add_argument("--save_all", default=False, action="store_true")  # save each stage result
     parser.add_argument("--ckpt_root", type=str, default="./ckpt/ckpt_rs1")
     parser.add_argument("--save_root", type=str, default="./output")

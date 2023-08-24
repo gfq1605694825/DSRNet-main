@@ -50,6 +50,37 @@ class Net(nn.Module):
         self.resnet = res2net50_v1b_26w_4s(pretrained=True, pretrain=opt.res2net_path)
         self.encoder = Encoder(opt)
 
+        # global context
+        self.encoder_tf_ss = Transformer(depth=2,
+                                         num_heads=1,
+                                         embed_dim=256,
+                                         mlp_ratio=3,
+                                         num_patches=196)
+
+        self.encoder_shaper_7 = nn.Sequential(nn.LayerNorm(512), nn.Linear(512, 1024), nn.GELU())
+        self.encoder_shaper_14 = nn.Sequential(nn.LayerNorm(320), nn.Linear(320, 256), nn.GELU())
+        self.encoder_shaper_28 = nn.Sequential(nn.LayerNorm(128), nn.Linear(128, 64), nn.GELU())
+        self.encoder_shaper_56 = nn.Sequential(nn.LayerNorm(64), nn.Linear(64, 16), nn.GELU())
+
+        self.encoder_merge7_14 = nn.Sequential(nn.BatchNorm2d(512),
+                                               nn.Conv2d(512, 256, kernel_size=3, padding=1, bias=True),
+                                               nn.LeakyReLU())
+        self.encoder_merge28_14 = nn.Sequential(nn.BatchNorm2d(512),
+                                                nn.Conv2d(512, 256, kernel_size=3, padding=1, bias=True),
+                                                nn.LeakyReLU())
+        self.encoder_merge56_14 = nn.Sequential(nn.BatchNorm2d(512),
+                                                nn.Conv2d(512, 256, kernel_size=3, padding=1, bias=True),
+                                                nn.LeakyReLU())
+
+        self.encoder_pred = nn.Sequential(nn.LayerNorm(256),
+                                          nn.Linear(256, 256),
+                                          nn.GELU(),
+                                          nn.LayerNorm(256),
+                                          nn.Linear(256, 256),
+                                          nn.GELU(),
+                                          nn.LayerNorm(256),
+                                          nn.Linear(256, 1)
+                                          )
         # main network
         self.transformer = nn.ModuleList([Transformer(depth=d,
                                                       num_heads=n,
@@ -58,15 +89,15 @@ class Net(nn.Module):
                                                       num_patches=p) for d, n, e, m, p in opt.transformer])
 
         # FEM module
-        self.FEM7_14 = FEM(emb_dim=320, hw=7, cur_stg=512)
-        self.FEM14_28 = FEM(emb_dim=128, hw=14, cur_stg=320)
-        self.FEM28_56 = FEM(emb_dim=64, hw=28, cur_stg=128)
+        self.fuser7_14 = FEM(emb_dim=320, hw=7, cur_stg=512)
+        self.fuser14_28 = FEM(emb_dim=128, hw=14, cur_stg=320)
+        self.fuser28_56 = FEM(emb_dim=64, hw=28, cur_stg=128)
 
         # ERM module
-        self.ERM_7 = ERM(inc=512, outc=1024, hw=7, embed_dim=512, num_patches=49)
-        self.ERM_14 = ERM(inc=320, outc=256, hw=14, embed_dim=320, num_patches=196)
-        self.ERM_28 = ERM(inc=128, outc=64, hw=28, embed_dim=128, num_patches=784)
-        self.ERM_56 = ERM(inc=64, outc=16, hw=56, embed_dim=64, num_patches=3136)
+        self.CRM_7 = ERM(inc=512, outc=1024, hw=7, embed_dim=512, num_patches=49)
+        self.CRM_14 = ERM(inc=320, outc=256, hw=14, embed_dim=320, num_patches=196)
+        self.CRM_28 = ERM(inc=128, outc=64, hw=28, embed_dim=128, num_patches=784)
+        self.CRM_56 = ERM(inc=64, outc=16, hw=56, embed_dim=64, num_patches=3136)
 
         # CNN feature channel compression
         self.down1 = nn.Conv2d(2048, 1024, kernel_size=1, stride=1)
@@ -111,25 +142,25 @@ class Net(nn.Module):
         c1 = self.ccm_c1(c1)  # 7 7 512
 
         # 7 7 1024
-        p1_7, p2_7, out_7 = self.ERM_7(out_7)
+        p1_7, p2_7, out_7 = self.CRM_7(out_7)
         pred.append(p1_7)
         pred.append(p2_7)
 
         # 14 14 256
-        out_14 = self.FEM7_14(out_14, out_7, c2)
-        p1_14, p2_14, out_14 = self.ERM_14(out_14)
+        out_14 = self.fuser7_14(out_14, out_7, c2)
+        p1_14, p2_14, out_14 = self.CRM_14(out_14)
         pred.append(p1_14)
         pred.append(p2_14)
 
         # 28 28 64
-        out_28 = self.FEM14_28(out_28, out_14, c3)
-        p1_28, p2_28, out_28 = self.ERM_28(out_28)
+        out_28 = self.fuser14_28(out_28, out_14, c3)
+        p1_28, p2_28, out_28 = self.CRM_28(out_28)
         pred.append(p1_28)
         pred.append(p2_28)
 
         # 56 56 16
-        out_56 = self.FEM28_56(out_56, out_28, c4)
-        p1_56, p2_56, out_56 = self.ERM_56(out_56)
+        out_56 = self.fuser28_56(out_56, out_28, c4)
+        p1_56, p2_56, out_56 = self.CRM_56(out_56)
         pred.append(p1_56)
         pred.append(p2_56)
 
