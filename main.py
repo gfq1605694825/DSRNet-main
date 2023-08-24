@@ -29,7 +29,7 @@ def main():
                                                                   ckpt[0],
                                                                   opt.test_dataset.split('_')[1]))
 
-        result = tester.evaluate(path=ckpt[0] + "53_ECSSD.pt")  # 65_fuseCNN.pt
+        result = tester.evaluate(path=ckpt[0] + "best.pt")  # 65_fuseCNN.pt
         msg = "ckpt:{} MAE: {:.4f}\n".format(ckpt[0], result)
         print(msg)
         print('done testing')
